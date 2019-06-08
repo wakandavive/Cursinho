@@ -1,5 +1,9 @@
 from random import randint
 
+matéria = input("escolha a matéria:")
+print("você escolheu %s" % matéria)
+print("VOCÊ ESTÁ PREPARADO!!!!....")
+print("LOADING....//LOADING")
 
 notas1 = randint(0, 10)
 notas2 = randint(0, 10)
