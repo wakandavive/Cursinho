@@ -43,15 +43,27 @@ def dias_para_segundos(dias, horas, minutos, segundos):
     """ Recebe uma data em dias com horas, minutos e segundos, e retorna
     a data em segundos"""
 
+    dias_para_segundos = dias * 86400
+    horas_para_segundos = horas * 3600
+    minutos_para_segundos = minutos * 60
+
+    soma = dias_para_segundos + horas_para_segundos + minutos_para_segundos + segundos
+
+    return soma
 
 def celsius_para_fahrenheit(c):
     """ Recebe uma temperatura em celsius, e retorna a temperatura
     em fahrenheit"""
+    celsius_para_fahrenheit = (c * 9/5) + 32
+    return celsius_para_fahrenheit
 
 
 def fahrenheit_para_celsius(f):
     """ Recebe uma temperatura em fahrenheit, e retorna a temperatura
      em celsius"""
+
+    fahrenheit_para_celsius = (f - 32) / 1.8
+    return round(fahrenheit_para_celsius, 2)
 
 
 def preco_aluguel_carro(dias, km):
@@ -59,22 +71,43 @@ def preco_aluguel_carro(dias, km):
     quantidade de quilômetros rodados, e retorna o valor a ser pago.
     1 dia: 60 reais mais R$ 0,15 por km rodado."""
 
+    preco_aluguel_carro =  ((dias * 60 )   + (km * 0.15))
+    return round(preco_aluguel_carro, 2)
+
+
 
 def dias_perdidos_por_fumar(cigarros_fumados_por_dia, anos_fumando):
     """ Recebe uma quantidade de cigarros fumados por dia e a quantidade
      de anos que fuma, e retorna o total de dias perdidos, sabendo que
      cada cigarro reduz a vida em 10 minutos."""
 
+    quantidades = 1
+    minutosc = 10
+    dias_perdidos_por_fumar = (( (cigarros_fumados_por_dia * anos_fumando) * 365) * 10) / 1440
+    return round(dias_perdidos_por_fumar, 2)
+
+
+
 
 def dois_elevado_a_um_milhao():
     """ Calcula dois elevado a um milhão, e retorna a quantidade de
     algarismos"""
+    dois = [2]
+    resultado = dois[0] ** 1000000
+    quantidade  = str(resultado)
+    final =  len(quantidade)
+    return final
+
+
+
 
 
 def media_final_aprovado_reprovado(p1, p2, ep1, ep2):
     """ Recebe as notas das 2 provas e 2 exercícios de programação e retorna
     se o aluno foi ou não aprovado. As provas têm peso 7 e os exercícios
     têm peso 3. Cada parcial tem peso igual."""
+    
+    
 
 
 def salario(valor_hora, horas_mensais):
