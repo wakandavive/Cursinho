@@ -34,9 +34,8 @@ def preco_com_desconto(preco_original, percentual_desconto):
     """ Recebe um preço e sua porcentagem de desconto, e retorna
     novo preço"""
 
-    novo_preço = preco_original - ((preco_original * percentual_desconto) / 100 )
+    novo_preço = preco_original - ((preco_original * percentual_desconto) / 100)
     return round(novo_preço, 2)
-
 
 
 def dias_para_segundos(dias, horas, minutos, segundos):
@@ -51,10 +50,11 @@ def dias_para_segundos(dias, horas, minutos, segundos):
 
     return soma
 
+
 def celsius_para_fahrenheit(c):
     """ Recebe uma temperatura em celsius, e retorna a temperatura
     em fahrenheit"""
-    celsius_para_fahrenheit = (c * 9/5) + 32
+    celsius_para_fahrenheit = (c * 9 / 5) + 32
     return celsius_para_fahrenheit
 
 
@@ -71,9 +71,8 @@ def preco_aluguel_carro(dias, km):
     quantidade de quilômetros rodados, e retorna o valor a ser pago.
     1 dia: 60 reais mais R$ 0,15 por km rodado."""
 
-    preco_aluguel_carro =  ((dias * 60 )   + (km * 0.15))
+    preco_aluguel_carro = ((dias * 60) + (km * 0.15))
     return round(preco_aluguel_carro, 2)
-
 
 
 def dias_perdidos_por_fumar(cigarros_fumados_por_dia, anos_fumando):
@@ -83,10 +82,8 @@ def dias_perdidos_por_fumar(cigarros_fumados_por_dia, anos_fumando):
 
     quantidades = 1
     minutosc = 10
-    dias_perdidos_por_fumar = (( (cigarros_fumados_por_dia * anos_fumando) * 365) * 10) / 1440
+    dias_perdidos_por_fumar = (((cigarros_fumados_por_dia * anos_fumando) * 365) * 10) / 1440
     return round(dias_perdidos_por_fumar, 2)
-
-
 
 
 def dois_elevado_a_um_milhao():
@@ -94,20 +91,21 @@ def dois_elevado_a_um_milhao():
     algarismos"""
     dois = [2]
     resultado = dois[0] ** 1000000
-    quantidade  = str(resultado)
-    final =  len(quantidade)
+    quantidade = str(resultado)
+    final = len(quantidade)
     return final
-
-
-
 
 
 def media_final_aprovado_reprovado(p1, p2, ep1, ep2):
     """ Recebe as notas das 2 provas e 2 exercícios de programação e retorna
     se o aluno foi ou não aprovado. As provas têm peso 7 e os exercícios
     têm peso 3. Cada parcial tem peso igual."""
-    
-    
+
+    notas = p1 * (0.70 + p2 * 0.70) + (ep1 * 0.30 + ep2 * 0.30)
+    notasw = notas / 4
+    return notasw > 7
+
+
 
 
 def salario(valor_hora, horas_mensais):
@@ -119,6 +117,10 @@ def salario(valor_hora, horas_mensais):
     - IR é 11% do salário bruto
     - Sindicato é 5% do salário bruto"""
 
+    salario = valor_hora * horas_mensais
+    descontos = salario - ( salario * 24/100)
+
+    return descontos
 
 def tinta(metros_pintar):
     """ Recebe quantos metros quadrados precisa pintar,
@@ -133,6 +135,11 @@ def duzias(ovos):
     cima se necessário.
     '''
 
+    duzias = ovos / 12
+
+    return  round(duzias)
+
+
 
 def decompor_numero(numero):
     '''
@@ -140,6 +147,9 @@ def decompor_numero(numero):
     centenas, dezenas e unidades do mesmo.
     Obs.: não utilize operações com strings
     '''
+
+    decompor_numero = (numero * 1000) umero * 100) (numero *10)
+
 
 
 def palindrome(texto):
