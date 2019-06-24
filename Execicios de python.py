@@ -152,27 +152,33 @@ def decompor_numero(numero):
     Obs.: não utilize operações com strings
     '''
 
-
+    numero_int = numero // 100
+    decompor_numero = (numero -(numero_int*100)) // 10
+    ok = numero -(numero_int*100) - (decompor_numero *10)
+    return numero_int, decompor_numero,ok
 
 
 def palindrome(texto):
     """Faça uma função que verifique se uma textro passado é palíndrome,
     isto é, se é igual quando lido de trás pra frente."""
 
-    a = "ovo"
-    b = "ovo"
-    c = b[:: -1]
-    return c==b
+    texto = texto.lower()
+    texto = texto.replace("!","")
+    texto = texto.replace(" ","")
+    return texto == texto[::-1]
 
 
 def troca_caixa(texto):
     """Vogais ficam em caixa alta (maiúsculas)
     Consoantes ficam em caixa baixa (minúsculas)"""
 
-    s = "aRaQuaRi"
-    d = "CaXiaS Do SuL"
-
-    return s.swapcase()
+    texto = texto.lower()
+    texto = texto.replace("a", "A")
+    texto = texto.replace("e", "E")
+    texto = texto.replace("i", "I")
+    texto = texto.replace("o", "O")
+    texto = texto.replace("u", "U")
+    return texto
 
 
 
@@ -180,9 +186,10 @@ def imprime_mes_por_extenso(data):
     """Faça um programa que solicite a data de nascimento (dd/mm/aaaa)
     e imprima com o nome do mês por extenso
     """
-    imprima = "22/02/2004"
 
-    return result
+
+
+
 
 
 def encontra_caracter(texto, caracter_procurado):
@@ -197,9 +204,15 @@ def é_azarado(numero):
 def ondernamento_contrario(lista):
     """ Devolve a lista invertida"""
 
+    return  lista[::-1]
+
 
 def maximo(lista):
     """ Calcule o maior número da 'lista' """
+
+    string = max(lista,key =int)
+    return string
+
 
 
 def minimo(lista):
