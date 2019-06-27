@@ -188,6 +188,11 @@ def imprime_mes_por_extenso(data):
     """
 
 
+    return data
+
+
+
+
 
 
 
@@ -197,8 +202,19 @@ def encontra_caracter(texto, caracter_procurado):
     aparece o caracter especificado"""
 
 
+
+
 def é_azarado(numero):
     """O último dígito não pode ser igual ao primeiro, porque isso dá azar."""
+
+
+    numero.split()
+    primeiro = numero[0]
+    b = numero[-1]
+    return primeiro == b
+
+
+
 
 
 def ondernamento_contrario(lista):
@@ -210,23 +226,28 @@ def ondernamento_contrario(lista):
 def maximo(lista):
     """ Calcule o maior número da 'lista' """
 
-    string = max(lista,key =int)
-    return string
+
+    return max(lista)
 
 
 
 def minimo(lista):
     """ Calcule o menor número da 'lista' """
 
+    return min(lista)
+
 
 def maior_menor(lista):
     """ Calcule o maior e o menor numero da 'lista' """
+
+    return max(lista) , min(lista)
 
 
 def media_saltos_lista(saltos):
     """Receba uma lista com os saltos de um atleta e calcule a média
     dos seus saltos, sabendo que o melhor e o pior saltos são desconsiderados.
     """
+
 
 
 def contem(lista, item_procurado):
@@ -236,6 +257,9 @@ def contem(lista, item_procurado):
 def conta(lista, item_procurado):
     """Informa quantas ocorrências de um item existem numa lista."""
 
+    lista = lista.count(item_procurado)
+
+    return lista
 
 def mes_extenso(mes):
     """Receba um número correspondente ao mês e devolva o nome do mês,
@@ -246,6 +270,9 @@ def mes_extenso(mes):
 def media_temperaturas(temperaturas):
     """Devolva a média das temperaturas.
     """
+    temperaturas = sum(temperaturas) / len(temperaturas)
+    return temperaturas
+
 
 
 def leet(texto):
@@ -262,6 +289,10 @@ def apaga(s, n):
     apaga('kitten', 1) -> 'ktten'
     apaga('kitten', 4) -> 'kittn'
     """
+
+    s = "s ,n"
+    return s.count()
+
 
 
 # Área de testes: só mexa aqui se souber o que está fazendo!
