@@ -33,6 +33,10 @@ def data_valida(data):
     '''Valida data. Recebe uma string no formato dd/mm/aaaa e informa
     um valor lógico indicando se a data é válida ou não.'''
 
+   
+
+
+
 
 
 def maior3(a, b, c):
@@ -68,6 +72,26 @@ def baskara(a, b, c):
     - Se o delta for positivo, a equação possui duas raiz reais.
     Devolva uma tupla com dois elementos.
     '''
+
+    if a == 0:
+        return False
+    
+    delta = (b * b) - 4 * a * c
+
+    if delta < 0:
+        return False 
+        
+    
+    elif delta == 0:
+        return False 
+    
+    else:
+        x1 = ((b * -1) + (delta ** 0.5) / 2 * a)
+        x2 = ((b * -1) - (delta ** 0.5) / 2 * a)
+        return x1,x2
+
+
+
 
 
 def acrescimo_nota_bb(nota_sozinho, nota_com_ajuda):
