@@ -72,23 +72,21 @@ def baskara(a, b, c):
     - Se o delta for positivo, a equação possui duas raiz reais.
     Devolva uma tupla com dois elementos.
     '''
-
+    delta = (b**2)-(4*a*c)
+    int(delta)
     if a == 0:
-        return False
+        return (-c/b,)
     
-    delta = (b * b) - 4 * a * c
-
+    x1 = (-b + (delta**0.5)) / 2*a
+    x2 = (-b - (delta**0.5)) / 2*a
+    
     if delta < 0:
-        return False 
-        
-    
+        return ()
     elif delta == 0:
-        return False 
-    
+        return(x1,)
     else:
-        x1 = ((b * -1) + (delta ** 0.5) / 2 * a)
-        x2 = ((b * -1) - (delta ** 0.5) / 2 * a)
-        return x1,x2
+        return(x1,x2)
+        
 
 
 
@@ -99,6 +97,32 @@ def acrescimo_nota_bb(nota_sozinho, nota_com_ajuda):
     depois que o big brother ajudou, e retorna o acrecimo que o big
      brother recebera em sua nota pela ajuda.
      O acréscimo é de 1/4 da diferença das notas, se for positivo'''
+
+    aumento = (nota_com_ajuda - nota_sozinho)  
+    if aumento > 0:
+        return round(aumento ** 1/4, 1)
+    else:
+        return 0
+             
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -154,12 +178,17 @@ def main():
     test(data_valida("31/04/2014"), False)
     test(data_valida("30/09/2014"), True)
     test(data_valida("31/09/2014"), False)
+     
     test(data_valida("30/06/2014"), True)
     test(data_valida("31/06/2014"), False)
+     
     test(data_valida("30/11/2014"), True)
     test(data_valida("31/11/2014"), False)
+     
     test(data_valida("32/01/2014"), False)
+     
     test(data_valida("01/01/0000"), False)
+     
     test(data_valida("01/13/2014"), False)
     test(data_valida("01/00/2014"), False)
     test(data_valida("29/02/2014"), False)
