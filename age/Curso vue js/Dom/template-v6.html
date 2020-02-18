@@ -1,0 +1,33 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <p v-once>{{ titulo }}</p>
+    <p>{{ Salutation() }}</p>
+    <button><a v-bind:href="link">google</a></button>
+</div>
+
+<script>
+
+    new Vue({
+    
+        el: "#app",
+        data:{
+            titulo: "templates",
+            link:'http://google.com.br'
+        },
+        methods : {
+            Salutation: function(){
+                this.titulo = 'Bom dia!!'
+                return this.titulo
+            }
+        }
+    
+    })
+
+
+
+    
+
+
+    
+</script>
